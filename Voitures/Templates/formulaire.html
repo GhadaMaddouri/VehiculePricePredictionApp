@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Prediction</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+<!--
+
+Template 2076 Zentro
+
+http://www.tooplate.com/view/2076-zentro
+
+-->
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/animate.min.css">
+	<link rel="stylesheet" href="static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/css/nivo-lightbox.css">
+	<link rel="stylesheet" href="static/css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+
+<!-- home section -->
+<section id="home" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h1>VOUS SOUHAITER AVOIR UNE IDEE SUR LE PRIX DE VOTRE VOITURE?</h1>
+				<h2>Vous etes au meilleur endroit!</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- contact section -->
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10 col-sm-12 text-center">
+				<h1 class="heading">Prediction</h1>
+				<hr>
+			</div>
+			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+				<form name="form", method="POST">
+					<div class="col-md-6 col-sm-6">
+                        <input type="number" name="Annee" class="form-control" placeholder="Annee" required="required"/>
+						<input type="number" name="Kilomètrage" class="form-control" placeholder="Kilomètrage en Km" required="required"/>
+                        Couleur: <select name="couleur" id="couleur" class="form-control"><option value="">--Choisissez une couleur--</option>
+                            <option value="Argent">Argent</option>
+                            <option value="Beige">Beige</option>
+                            <option value="Blanc">Blanc</option>
+                            <option value="Bleu">Bleu</option>
+                            <option value="Camel">Camel</option>
+                            <option value="Corail">Corail</option>
+                            <option value="Doré">Doré</option>
+                            <option value="Gris">Gris</option>
+                            <option value="Jaune">Jaune</option>
+                            <option value="Marron">Marron</option>
+                            <option value="Multicolore">Multicolore</option>
+                            <option value="Noir">Noir</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Rose">Rose</option>
+                            <option value="Rouge">Rouge</option>
+                            <option value="Vert">Vert</option>
+                            <option value="Violet">Violet</option>
+                            <option value="Autre">Autres</option>
+                        </select>
+
+                        Etat: <select name="etat" id="etat" class="form-control"><option value="">--Choisissez l'état de la voiture--</option>
+                            <option value="Avec kilométrage">Avec kilomètrage</option>
+                            <option value="Non dedouanné">Non dédouanné</option>
+                            <option value="Nouveau">Nouveau</option>
+                            <option value="Pièces manquantes">Pièces manquantes</option>
+                            <option value="RS">RS</option>
+                        </select>
+
+                        Boite: <select name="boite" id="boite" class="form-control"><option value="">--Choisissez la boite de la voiture--</option>
+                            <option value="Automatique">Automatique</option>
+                            <option value="Manuelle">Manuelle</option>
+                        </select>
+
+                        Cylidré: <select name="cylindre" id="cylindre" class="form-control"><option value="">--Cylindré--</option>
+                            <option value="<1.0L"><1.0L</option>
+                            <option value="1.1L">1.1L</option>
+                            <option value="1.2L">1.2L</option>
+                            <option value="1.3L">1.3L</option>
+                            <option value="1.4L">1.4L</option>
+                            <option value="1.5L">1.5L</option>
+                            <option value="1.6L">1.6L</option>
+                            <option value="1.7L">1.7L</option>
+                            <option value="1.8L">1.8L</option>
+                            <option value="1.9L">1.9L</option>
+                            <option value="2.0L">2.0L</option>
+                            <option value="2.1L">2.1L</option>
+                            <option value="2.2L">2.2L</option>
+                            <option value="2.3L">2.3L</option>
+                            <option value="2.4L">2.4L</option>
+                            <option value="2.5L">2.5L</option>
+                            <option value="2.7L">2.7L</option>
+                            <option value="2.8L">2.8L</option>
+                            <option value="2.9L">2.9L</option>
+                            <option value="3.0L">3.0L</option>
+                            <option value="3.2L">3.2L</option>
+                            <option value="3.5L">3.5L</option>
+                            <option value="4.0L">>4.0L</option>
+                        </select>
+
+
+
+				    </div>
+                    <div class="col-md-6 col-sm-6">
+                        Marque: <select name="marque" id="marque" onchange="updateGamme()" class="form-control"><option value="">--Marque--</option>
+                            <option value="AC">AC</option>
+                            <option value="Acrea">Acrea</option>
+                            <option value="Alfa Romeo">Alfa Romeo</option>
+                            <option value="Aston Martin">Aston Martin</option>
+                            <option value="Audi">Audi</option>
+                            <option value="BMW">BMW</option>
+                            <option value="BYD">BYD</option>
+                            <option value="Chery">Chery</option>
+                            <option value="Chevrolet">Chevrolet</option>
+                            <option value="Chrysler">Chrysler</option>
+                            <option value="Citroen">Citroen</option>
+                            <option value="Dacia">Dacia</option>
+                            <option value="Daihatsu">Daihatsu</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Ford">Ford</option>
+                            <option value="Geely">Geely</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Hyundai">Hyundai</option>
+                            <option value="Isuzu">Isuzu</option>
+                            <option value="Iveco">Iveco</option>
+                            <option value="Jeep">Jeep</option>
+                            <option value="Kia">Kia</option>
+                            <option value="lancia">lancia</option>
+                            <option value="Land Rover">Land Rover</option>
+                            <option value="Mahindra">Mahindra</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="mini">mini</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Opel">Opel</option>
+                            <option value="Peugeot">Peugeot</option>
+                            <option value="Porsche">Porsche</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Seat">Seat</option>
+                            <option value="Skoda">Skoda</option>
+                            <option value="Smart">Smart</option>
+                            <option value="Ssangyong">Ssangyong</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Volkswagen">Volkswagen</option>
+                            <option value="Volvo">Volvo</option>
+                        </select>
+
+                        Gamme: <select name="gamme" id="gamme" class="form-control">
+                            <option value="">Sélectionnez d'abord une marque</option>
+                        </select>
+
+                        Carrosserie: <select name="carrosserie" id="carrosserie" class="form-control"><option value="">--Carrosserie--</option>
+                            <option value="4x4">4x4</option>
+                            <option value="Berline">Berline</option>
+                            <option value="Cabriolet">Cabriolet</option>
+                            <option value="Compacte">Compacte</option>
+                            <option value="Monospace">Monospace</option>
+                            <option value="Pick up">Pick up</option>
+                            <option value="Utilitaire">Utilitaire</option>
+                            <option value="Autres">Autre</option>
+                        </select>
+
+                        Puissance: <select name="Puissance" id="Puissance" class="form-control"><option value="">--Puissance--</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="24">24</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                        </select>
+
+                        Carburant: <select name="carburant" id="carburant" class="form-control"><option value="">--Carburant--</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Electrique">Electrique</option>
+                            <option value="Essence">Essence</option>
+                            <option value="Hybride">Hybride</option>
+                        </select>
+
+				    </div>
+					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
+						<input name="submit" type="submit" class="form-control" id="submit" value="PRIX">
+					</div>
+				</form>
+			</div>
+			<div class="col-md-2 col-sm-1"></div>
+		</div>
+	</div>
+</section>
+
+
+<!-- JAVASCRIPT JS FILES -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+    function updateGamme() {
+        var marque = document.getElementById("marque");
+        var gamme = document.getElementById("gamme");
+
+        // Réinitialiser la liste des gammes
+        gamme.innerHTML = "";
+
+        if (marque.value === "AC") {
+            // Remplir la liste des villes pour la France
+            var ACGammes = ["Cobra", "GT 40", "Seven"];
+            for (var i = 0; i < ACGammes.length; i++) {
+                var option = document.createElement("option");
+                option.text = ACGammes[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Acrea") {
+            // Remplir la liste des villes pour l'Espagne
+            var AcreaGammes = ["Zeste"];
+            for (var i = 0; i < AcreaGammes.length; i++) {
+                var option = document.createElement("option");
+                option.text = AcreaGammes[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Alfa Romeo") {
+            // Remplir la liste des villes pour l'Italie
+            var AlfaRomeoGamme = ["147 gta", "Giulietta", "Mito"];
+            for (var i = 0; i < AlfaRomeoGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = AlfaRomeoGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Aston Martin") {
+            // Remplir la liste des villes pour l'Italie
+            var AstonMartinGamme = ["DB7"];
+            for (var i = 0; i < AstonMartinGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = AstonMartinGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Audi") {
+            // Remplir la liste des villes pour l'Italie
+            var AudiGamme = ["A1", "A4", "A5", "A6", "Q3", "Q5", "Q7", "TTS"];
+            for (var i = 0; i < AudiGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = AudiGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "BMW") {
+            // Remplir la liste des villes pour l'Italie
+            var BMWGamme = ["Compact", "M", "M3", "Serie 1", "Serie 2", "Serie 3", "Serie 3 GT", "Serie 4", "Serie 5", "Serie 6", "Serie 7", "X1", "X3", "X5"];
+            for (var i = 0; i < BMWGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = BMWGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "BYD") {
+            // Remplir la liste des villes pour l'Italie
+            var BYDGamme = ["F1"];
+            for (var i = 0; i < BYDGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = BYDGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Chery") {
+            // Remplir la liste des villes pour l'Italie
+            var CheryGamme = ["A3", "QQ", "Tiggo"];
+            for (var i = 0; i < CheryGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = CheryGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Chevrolet") {
+            // Remplir la liste des villes pour l'Italie
+            var ChevroletGamme = ["Aveo", "Captiva", "Cruze", "S-10", "Spark"];
+            for (var i = 0; i < ChevroletGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = ChevroletGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Chrysler") {
+            // Remplir la liste des villes pour l'Italie
+            var ChryslerGamme = ["PT Cruiser"];
+            for (var i = 0; i < ChryslerGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = ChryslerGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Citroen") {
+            // Remplir la liste des villes pour l'Italie
+            var CitroenGamme = ["Berlingo", "C1", "C15", "C2", "C3", "C3 pluriel", "C35", "C4", "C4 Cactus", "C4 Picasso", "C5", "C-Elysée", "DS3", "DS4", "DS5", "Jumper", "Jumpy", "Nemo", "Saxo"];
+            for (var i = 0; i < CitroenGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = CitroenGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Dacia") {
+            // Remplir la liste des villes pour l'Italie
+            var DaciaGamme = ["Dokker", "Duster", "Logan", "Logan MCV", "Sandero"];
+            for (var i = 0; i < DaciaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = DaciaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Daihatsu") {
+            // Remplir la liste des villes pour l'Italie
+            var DaihatsuGamme = ["Terios"];
+            for (var i = 0; i < DaihatsuGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = DaihatsuGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Fiat") {
+            // Remplir la liste des villes pour l'Italie
+            var FiatGamme = ["500", "500C", "500X", "Doblo", "Ducato", "Fiorino", "Grande Punto", "Palio", "Panda", "Punto", "Siena", "Stilo", "Tipo", "Uno"];
+            for (var i = 0; i < FiatGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = FiatGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Ford") {
+            // Remplir la liste des villes pour l'Italie
+            var FordGamme = ["C-Max", "Connect", "Edge", "Excursion", "Fiesta", "Focus", "Focus C-MAX", "Fusion", "Kuga", "Mondeo", "Probe", "Puma", "Ranger", "S-Max", "Transit"];
+            for (var i = 0; i < FordGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = FordGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Geely") {
+            // Remplir la liste des villes pour l'Italie
+            var GeelyGamme = ["GK-GL", "GK-GS", "LC", "MK-GL"];
+            for (var i = 0; i < GeelyGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = GeelyGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Honda") {
+            // Remplir la liste des villes pour l'Italie
+            var HondaGamme = ["City", "CR-V", "HR-V"];
+            for (var i = 0; i < HondaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = HondaGamme[i];
+                gamme.add(option);
+            }
+        }else if (marque.value === "Hyundai") {
+            // Remplir la liste des villes pour l'Italie
+            var HyundaiGamme = ["Elantra", "Galopper", "Grand i10", "H-100", "I10", "I20", "Matrix", "Santa Fe", "Tucson"];
+            for (var i = 0; i < HyundaiGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = HyundaiGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Isuzu") {
+            // Remplir la liste des villes pour l'Italie
+            var IsuzuGamme = ["D-MAX", "Landwind", "Trooper"];
+            for (var i = 0; i < IsuzuGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = IsuzuGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Iveco") {
+            // Remplir la liste des villes pour l'Italie
+            var IvecoGamme = ["Daily"];
+            for (var i = 0; i < IvecoGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = IvecoGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Jeep") {
+            // Remplir la liste des villes pour l'Italie
+            var JeepGamme = ["Cherokee", "Compass", "Grand Cherokee"];
+            for (var i = 0; i < JeepGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = JeepGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Kia") {
+            // Remplir la liste des villes pour l'Italie
+            var KiaGamme = ["Cerato", "K2700", "Optima", "Picanto", "Rio", "Sorento", "Sportage"];
+            for (var i = 0; i < KiaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = KiaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "lancia") {
+            // Remplir la liste des villes pour l'Italie
+            var lanciaGamme = ["Delta"];
+            for (var i = 0; i < lanciaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = lanciaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Land Rover") {
+            // Remplir la liste des villes pour l'Italie
+            var LandRoverGamme = ["Defender", "Freelander", "Range Rover", "Range Rover Evoque", "Range Rover Sport"];
+            for (var i = 0; i < LandRoverGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = LandRoverGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Mahindra") {
+            // Remplir la liste des villes pour l'Italie
+            var MahindraGamme = ["Hover", "Scorpion"];
+            for (var i = 0; i < MahindraGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = MahindraGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Mazda") {
+            // Remplir la liste des villes pour l'Italie
+            var MazdaGamme = ["2", "3", "6", "B 2500", "BT-50", "CX-5", "E2000", "Familia", "MX3", "MX6"];
+            for (var i = 0; i < MazdaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = MazdaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Mercedes-Benz") {
+            // Remplir la liste des villes pour l'Italie
+            var MercedesBenzGamme = ["210", "240", "250", "270", "Classe A", "Classe B", "Classe C", "Classe C coupe", "Classe CLA", "Classe CLK", "Classe CLS", "Classe E", "Classe G", "Classe GLA", "Classe M", "Classe ML", "Classe S", "Classe SLS", "Sprinter", "Vito"];
+            for (var i = 0; i < MercedesBenzGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = MercedesBenzGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "mini") {
+            // Remplir la liste des villes pour l'Italie
+            var miniGamme = ["Cabrio", "Cooper", "One"];
+            for (var i = 0; i < miniGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = miniGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Mitsubishi") {
+            // Remplir la liste des villes pour l'Italie
+            var MitsubishiGamme = ["Canter", "L200", "Lancer", "Nativa", "Pajero", "Pajero Sport"];
+            for (var i = 0; i < MitsubishiGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = MitsubishiGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Nissan") {
+            // Remplir la liste des villes pour l'Italie
+            var NissanGamme = ["Juke", "Micra", "Navara", "Patrol", "Patrol GR", "Qashqai", "Serena", "Terrano", "Urvan", "X-Trail"];
+            for (var i = 0; i < NissanGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = NissanGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Opel") {
+            // Remplir la liste des villes pour l'Italie
+            var OpelGamme = ["Agila", "Astra", "Campo", "Combo", "Corsa", "Frontera", "Insignia", "Vivaro", "Zafira"];
+            for (var i = 0; i < OpelGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = OpelGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Ford") {
+            // Remplir la liste des villes pour l'Italie
+            var FordGamme = ["C-Max", "Connect", "Edge", "Excursion", "Fiesta", "Focus", "Focus C-MAX", "Fusion", "Kuga", "Mondeo", "Probe", "Puma", "Ranger", "S-Max", "Transit"];
+            for (var i = 0; i < FordGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = FordGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Peugeot") {
+            // Remplir la liste des villes pour l'Italie
+            var PeugeotGamme = ["106", "206", "207", "208", "301", "306", "307", "308", "403", "405", "406", "407", "508", "806", "1007", "2008", "3008", "5008", "206 CC", "206+", "207 SW", "307 CC", "307 SW", "308 SW", "407 SW", "Bipper", "Boxer", "Expert", "Partner"];
+            for (var i = 0; i < PeugeotGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = PeugeotGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Porsche") {
+            // Remplir la liste des villes pour l'Italie
+            var PorscheGamme = ["Cayenne"];
+            for (var i = 0; i < PorscheGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = PorscheGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Renault") {
+            // Remplir la liste des villes pour l'Italie
+            var RenaultGamme = ["Clio", "Espace", "Express", "Fluence", "Grand Scenic", "Kadjar", "Kangoo", "Koleos", "Master", "Megane", "Megane CC", "Megane Estate", "R9", "Scenic", "Symbol", "Trafic", "Twingo"];
+            for (var i = 0; i < RenaultGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = RenaultGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Ford") {
+            // Remplir la liste des villes pour l'Italie
+            var FordGamme = ["C-Max", "Connect", "Edge", "Excursion", "Fiesta", "Focus", "Focus C-MAX", "Fusion", "Kuga", "Mondeo", "Probe", "Puma", "Ranger", "S-Max", "Transit"];
+            for (var i = 0; i < FordGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = FordGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Seat") {
+            // Remplir la liste des villes pour l'Italie
+            var SeatGamme = ["Altea", "Arosa", "Exeo", "Ibiza", "Leon", "Leon ST", "Toledo"];
+            for (var i = 0; i < SeatGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = SeatGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Skoda") {
+            // Remplir la liste des villes pour l'Italie
+            var SkodaGamme = ["Fabia", "Octavia"];
+            for (var i = 0; i < SkodaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = SkodaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Smart") {
+            // Remplir la liste des villes pour l'Italie
+            var SmartGamme = ["Crossblade"];
+            for (var i = 0; i < SmartGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = SmartGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Ssangyong") {
+            // Remplir la liste des villes pour l'Italie
+            var SsangyongGamme = ["Actyon", "Corando", "Rexton", "Stavic"];
+            for (var i = 0; i < SsangyongGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = SsangyongGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Suzuki") {
+            // Remplir la liste des villes pour l'Italie
+            var SuzukiGamme = ["Alto", "Baleno", "Celerio", "Maruti", "Swift"];
+            for (var i = 0; i < SuzukiGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = SuzukiGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Toyota") {
+            // Remplir la liste des villes pour l'Italie
+            var ToyotaGamme = ["Auris", "Avensis", "Aygo", "Corolla verso", "FJ", "Hi Ace", "Hilux", "Land Cruiser", "Prado", "RAV 4", "Yaris", "Yaris Verso"];
+            for (var i = 0; i < ToyotaGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = ToyotaGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Volkswagen") {
+            // Remplir la liste des villes pour l'Italie
+            var VolkswagenGamme = ["Amarok", "Caddy", "Crafter", "Golf 3", "Golf 4", "Golf 5", "Golf 6", "Golf 7", "Golf Plus", "Jetta", "Passat", "Passat CC", "Polo 4", "Polo 5", "Polo 6", "Polo 7", "Polo 8", "Scirocco", "Tiguan", "Touran", "Transporter"];
+            for (var i = 0; i < VolkswagenGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = VolkswagenGamme[i];
+                gamme.add(option);
+            }
+        } else if (marque.value === "Volvo") {
+            // Remplir la liste des villes pour l'Italie
+            var VolvoGamme = ["XC60", "XC90"];
+            for (var i = 0; i < VolvoGamme.length; i++) {
+                var option = document.createElement("option");
+                option.text = VolvoGamme[i];
+                gamme.add(option);
+            }
+        }
+
+    }
+</script>
+<p>Le prix estimé est de: {{ output }} Dinars</p>
+
+</body>
+</html>
